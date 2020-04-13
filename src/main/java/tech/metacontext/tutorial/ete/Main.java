@@ -21,10 +21,10 @@ import java.util.stream.Stream;
 import tech.metacontext.tutorial.ete.ex.EggNotCookedException;
 
 /**
- * A Java Tutorial for <br>
- * 1. Array and how to transform into stream, <br>
- * 2. Class and Status, <br>
- * 3. Use of Exceptions, and <br>
+ * A Java Mini Tutorial for <br>
+ * 1. Array (and how to transform it into stream), <br>
+ * 2. OO, Class and Status, <br>
+ * 3. Use of Exception, and <br>
  * 4. Stream & Functional Interface: Supplier, Consumer, Predicate.
  *
  * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org>
