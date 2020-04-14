@@ -1,9 +1,11 @@
 # A Hundred Eggs: A Mini Tutorial for Java
-:egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: 
+:egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: 
 
-from: https://blog.muspoe.info/2020/04/java.html
+<img src="./img/Egg_convoyer_bear_like_eggs.jpg" width="400"><br>
+Blog Article: https://blog.muspoe.info/2020/04/java.html<br>
+illustration by Alfredobear<br>
 
-__A Java Mini Tutorial for:__
+### A Java Mini Tutorial for:
 1. Array & Collection/List,
 2. OO, Class and Status,
 3. Use of Exceptions, and
@@ -20,6 +22,4 @@ Get inspired by a picture: <br>
 
 <img src="./img/eggs.jpg" width="400">
 
-:egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: 
-
-<img src="./img/Egg_convoyer_bear_like_eggs.jpg" width="400">
+:egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: :egg: 
