@@ -13,69 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tech.metacontext.tutorial.ete.draft;
+package tech.metacontext.tutorial.ete.array;
 
+import java.util.Arrays;
 import static java.util.function.Predicate.not;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import tech.metacontext.tutorial.ete.ex.EggNotCookedException;
 
 /**
- * A Java Tutorial for <br>
- * 1. List, <br>
- * 2. Class and Status, <br>
- * 3. Use of Exceptions, and <br>
- * 4. Stream Interface.
+ * A Java Mini Tutorial for <br>
+ * 1. Array (and how to transform it into stream), <br>
+ * 2. OO, Class and Status, <br>
+ * 3. Use of Exception, and <br>
+ * 4. Stream & Functional Interface: Supplier, Consumer, Predicate.
  *
  * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org>
  */
-public class MainFinished {
+public class Main {
 
     public static void main(String[] args) {
 
-        var number = 100;
-        // List<Egg> eggRack
+        final var number = 100;
+        // Egg[] eggRack
         var eggRack = Stream.generate(Egg::new)
                 .limit(number)
-                .collect(Collectors.toList());
-        System.out.println("\nWe have " + eggRack.size() + " eggs!!\n");
+                .toArray(Egg[]::new);
+        System.out.println("\nWe have " + eggRack.length + " eggs!!\n");
         // To see what we've got.
-        // eggRack.forEach(System.out::println);
+        // Arrays.stream(eggRack).forEach(System.out::println);
         // Can we eat them?
         System.out.println("\nCan we eat them?\n");
         try {
-            eggRack.forEach(Egg::eat);
+            Arrays.stream(eggRack).forEach(Egg::eat);
         } catch (Exception ex) {
             System.out.println("\nNo we can't because of " + ex.getClass().getSimpleName());
         }
         // So we have to unwrap them first.
         System.out.println("\nSo we have to unwrap them first.\n");
-        eggRack.forEach(Egg::unwrap);
+        Arrays.stream(eggRack).forEach(Egg::unwrap);
         // Can we eat them now?
-        System.out.println("\nCan we eat them now?");
+        System.out.println("\nCan we eat them now?\n");
         try {
-            eggRack.forEach(Egg::eat);
+            Arrays.stream(eggRack).forEach(Egg::eat);
         } catch (Exception ex) {
             System.out.println("\nNo we can't because of " + ex.getClass().getSimpleName());
         }
         // So we just cook them.
+        System.out.println("\nSo we just cook them.\n");
         try {
-            eggRack.forEach(Egg::cook);
+            Arrays.stream(eggRack).forEach(Egg::cook);
         } catch (Exception ex) {
             System.out.println("\nOh no! " + ex.getClass().getSimpleName());
         }
         // We have to filter out the rotten ones.
         System.out.println("\nWe have to filter out the rotten ones then cook.\n");
-        eggRack.stream().filter(not(Egg::isRotten)).filter(not(Egg::isCooked)).forEach(Egg::cook);
+        Arrays.stream(eggRack).filter(not(Egg::isRotten))
+                .filter(not(Egg::isCooked)).forEach(Egg::cook);
         // Can we eat them now?
         System.out.println("\nCan we eat them now?\n");
-        try {
-            eggRack.stream().forEach(Egg::eat);
-        } catch (Exception ex) {
-            System.out.println("\nOh no! We can't eat those rotten " + ex.getClass().getSimpleName());
-        }
         // So if we filter them out, we eat now!
-        System.out.println("\nSo if we filter them out, we eat now!\n");
-        eggRack.stream().filter(Egg::isCooked).forEach(Egg::eat);
-
+        System.out.println("\nSo if we filter the rotten out, we can eat now!\n");
+        try {
+            Arrays.stream(eggRack).filter(not(Egg::isRotten)).forEach(Egg::eat);
+        } catch (EggNotCookedException ex) {
+            System.out.println(ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println("\nNo we can't because of " + ex.getClass().getSimpleName());
+        }
     }
 }
+
+

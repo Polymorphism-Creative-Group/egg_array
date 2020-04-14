@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package tech.metacontext.tutorial.ete.draft;
+package tech.metacontext.tutorial.ete.array;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import tech.metacontext.tutorial.ete.ex.CookingRottenEggException;
 import tech.metacontext.tutorial.ete.ex.EggBurntException;
 import tech.metacontext.tutorial.ete.ex.EggNotCookedException;
-import tech.metacontext.tutorial.ete.ex.CookingRottenEggException;
 import tech.metacontext.tutorial.ete.ex.EggStillWrappedException;
 
 /**
@@ -34,29 +34,22 @@ public class Egg {
     boolean rotten;
     boolean cooked;
 
-    public Egg(boolean wrapped) {
-
-        this.wrapped = wrapped;
-        this.rotten = Math.random() > 0.8;
+    public Egg() {
+        this.wrapped = true;
+        this.rotten = Math.random() < 0.1;
         this.cooked = false;
     }
 
-    public Egg() {
-
-        this(true);
-    }
-
     public void unwrap() {
-
         if (wrapped) {
             this.wrapped = false;
             System.out.print("Unwrapped. ");
-        } else
-            System.out.print("Already unwrapped.");
+        } else {
+            System.out.println("Already unwrapped.");
+        }
     }
 
     public void cook() {
-
         if (wrapped) throw new EggStillWrappedException();
         if (rotten) throw new CookingRottenEggException();
         if (cooked) throw new EggBurntException();
@@ -65,9 +58,11 @@ public class Egg {
     }
 
     public void eat() {
-
         if (wrapped) throw new EggStillWrappedException();
-        if (!cooked) throw new EggNotCookedException();
+        if (!cooked) throw new EggNotCookedException(
+                    this.rotten
+                            ? "The egg is rotten!!!"
+                            : "The egg is not cooked yet.");
         System.out.print("Yammi! ");
     }
 }
