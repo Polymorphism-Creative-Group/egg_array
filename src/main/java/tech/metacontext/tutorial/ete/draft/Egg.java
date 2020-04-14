@@ -1,5 +1,3 @@
-package tech.metacontext.tutorial.ete.draft;
-
 /*
  * Copyright 2020 Jonathan Chang, Chun-yien <ccy@musicapoetica.org>.
  *
@@ -15,6 +13,8 @@ package tech.metacontext.tutorial.ete.draft;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package tech.metacontext.tutorial.ete.draft;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -65,7 +65,7 @@ public class Egg {
     }
 
     public void eat() {
-        
+
         if (wrapped) throw new EggStillWrappedException();
         if (!cooked) throw new EggNotCookedException();
         System.out.print("Yammi! ");

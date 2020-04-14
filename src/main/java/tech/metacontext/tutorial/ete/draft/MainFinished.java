@@ -15,7 +15,6 @@
  */
 package tech.metacontext.tutorial.ete.draft;
 
-import tech.metacontext.tutorial.ete.draft.Egg;
 import static java.util.function.Predicate.not;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
