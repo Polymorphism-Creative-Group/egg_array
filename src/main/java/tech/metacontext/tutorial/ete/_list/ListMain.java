@@ -28,7 +28,7 @@ import java.util.stream.Stream;
  *
  * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org>
  */
-public class MainFinished {
+public class ListMain {
 
     public static void main(String[] args) {
 

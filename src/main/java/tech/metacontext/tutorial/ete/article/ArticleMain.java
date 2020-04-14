@@ -76,6 +76,6 @@ class Egg {
     void eat() {
         if (wrapped) throw new EggStillWrappedException();
         if (!cooked) throw new EggNotCookedException();
-        System.out.print("Yammi! ");
+        System.out.print("Yummi! ");
     }
 }

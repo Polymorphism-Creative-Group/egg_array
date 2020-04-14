@@ -29,7 +29,7 @@ import tech.metacontext.tutorial.ete.ex.EggNotCookedException;
  *
  * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org>
  */
-public class Main {
+public class ArrayMain {
 
     public static void main(String[] args) {
 

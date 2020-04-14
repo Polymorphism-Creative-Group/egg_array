@@ -63,6 +63,6 @@ public class Egg {
                     this.rotten
                             ? "The egg is rotten!!!"
                             : "The egg is not cooked yet.");
-        System.out.print("Yammi! ");
+        System.out.print("Yummi! ");
     }
 }
